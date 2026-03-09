@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@utility btn {
+    @apply px-4 py-2 text-sm rounded-md transition duration-200 cursor-pointer inline-flex items-center justify-center;
+}
+
+@utility btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+@utility btn-secondary {
+    @apply bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200;
+}
+
+@utility btn-danger {
+    @apply bg-red-50 text-red-700 border border-red-200 hover:bg-red-100;
+}
+
+@utility input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+@utility label-text {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+@utility card {
+    @apply bg-white border border-gray-200 rounded-lg overflow-hidden;
+}
+
+@utility table-head {
+    @apply bg-gray-50 text-left text-gray-600 uppercase text-xs tracking-wide;
+}
+
+@utility table-cell {
+    @apply px-4 py-3;
+}
+
+@utility container-xl {
+    @apply max-w-5xl mx-auto px-4;
+}
+
+@utility alert {
+    @apply mb-4 px-4 py-3 border rounded-md text-sm;
+}
+
+@utility alert-success {
+    @apply bg-green-50 border-green-200 text-green-800;
+}
+
+@utility alert-error {
+    @apply bg-red-50 border-red-200 text-red-800;
+}
