@@ -10,3 +10,7 @@ Route::get('/', function () {
 
 Route::resource('products', ProductController::class);
 Route::post('/products/sync', [SyncController::class, 'sync'])->name('products.sync');
+Route::get('/setup', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Database migrated successfully!';
+});
